@@ -13,25 +13,30 @@ for (let i = 0; i < (16 * 16); i++) {
     container.appendChild(div)
 }
 
-// function to change grid color
-function colorChange(block) {
-    if (block.style.backgroundColor == "white") {
-        block.style.backgroundColor = "black"
-    }
-    else if (block.style.background == "white") {
-        block.style.backgroundColor = 'black'
-    }
-}
 
 const blocks = document.querySelectorAll('.block')
-blocks.forEach((block => {
-    block.addEventListener('mouseenter', (colorChange) => {
+// blocks.forEach((block => {
+//     block.addEventListener('mouseenter', (colorChange) => {
+//         if (block.style.backgroundColor == "white") {
+//             block.style.backgroundColor = "black"
+//         }
+//         else if (block.style.backgroundColor == "black") {
+//             block.style.backgroundColor = 'white'
+//         }
+//     });
+
+// }));
+
+function getRandomColor() {
+    return '#' + Math.random().toString(16).substring(2, 8);
+}
+
+blocks.forEach((block) => {
+    block.addEventListener('mouseenter', () => {
         if (block.style.backgroundColor == "white") {
-            block.style.backgroundColor = "black"
-        }
-        else if (block.style.backgroundColor == "black") {
-            block.style.backgroundColor = 'white'
+            block.style.backgroundColor = getRandomColor();
+        } else if (block.style.backgroundColor !== "white") {
+            block.style.backgroundColor = "white";
         }
     });
-
-}));
+});
