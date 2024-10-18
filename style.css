@@ -19,12 +19,14 @@
     height: 30px;
     /* width: 70px; */
     gap: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 button {
     justify-content: space-around;
     align-items: center;
-    height: 30px;
+    height: 50px;
     width: 100px;
 }
 
