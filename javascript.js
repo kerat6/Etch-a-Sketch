@@ -55,6 +55,7 @@ buttons.forEach(button => {
             const blocks = document.querySelectorAll('.block')
             blocks.forEach(block => {
                 block.style.backgroundColor = "white";
+                block.style.opacity = 1;
 
             });
         }
