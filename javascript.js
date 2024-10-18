@@ -48,9 +48,9 @@ buttons.forEach(button => {
             });
         }
         else if (buttonClick == 'newGrid') {
-            const gridSize = Number(prompt("How many squares would you like per side?", '16'))
-            while (gridSize >= 101) {
-                let gridSize = Number(prompt("Please keep the number 100 or smaller.")
+            let gridSize = Number(prompt("How many squares would you like per side?", '16'))
+            while (gridSize >= 101 || isNaN(gridSize) || gridSize < 1) {
+                gridSize = Number(prompt("Please keep the number between 1-100.")
                 )
             }
             container.innerHTML = ''
