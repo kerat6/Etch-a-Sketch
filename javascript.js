@@ -9,8 +9,9 @@ for (let i = 0; i < (16 * 16); i++) {
     div.style.flexGrow = 1;
     div.style.alignItems = "center";
     div.style.backgroundColor = "white";
-    container.style.border = "solid black";
+    // container.style.border = "solid black";
     div.style.border = "solid black";
+    div.style.borderWidth = '0px';
     container.appendChild(div)
 
 }
@@ -62,12 +63,13 @@ buttons.forEach(button => {
                 const div = document.createElement("div");
                 div.setAttribute("class", "block")
                 div.style.display = "flex";
+                div.style.flexGrow = '1';
                 div.style.height = `${1000 / gridSize}px`;
                 div.style.width = `${1000 / gridSize}px`;
                 div.style.alignItems = "center";
                 div.style.backgroundColor = "white";
-                div.style.border = "solid black";
-                div.style.borderWidth = '1px';
+                // div.style.border = "solid black";
+                // div.style.borderWidth = '0px';
                 container.appendChild(div);
 
             }
