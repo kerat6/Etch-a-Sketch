@@ -14,6 +14,7 @@ for (let i = 0; i < (16 * 16); i++) {
     div.style.borderWidth = '0px';
     container.appendChild(div)
 
+
 }
 
 
@@ -38,8 +39,10 @@ blocks.forEach((block) => {
     block.addEventListener('mouseenter', () => {
         if (block.style.backgroundColor == "white") {
             block.style.backgroundColor = getRandomColor();
-        } else if (block.style.backgroundColor !== "white") {
-            block.style.backgroundColor = "white";
+            block.style.opacity = 0.1;
+        } else if (block.style.opacity !== 1) {
+            let currentOpacity = Number(block.style.opacity);
+            block.style.opacity = (currentOpacity + 0.1);
         }
     });
 });
@@ -57,6 +60,10 @@ buttons.forEach(button => {
         }
         else if (buttonClick == 'newGrid') {
             const gridSize = Number(prompt("How many squares would you like per side?", '16'))
+            while (gridSize >= 101) {
+                let gridSize = Number(prompt("Please keep the number 100 or smaller.")
+                )
+            }
             container.innerHTML = ''
             for (let i = 0; i < (gridSize * gridSize); i++) {
                 const container = document.querySelector("#container");
@@ -78,8 +85,10 @@ buttons.forEach(button => {
                 block.addEventListener('mouseenter', () => {
                     if (block.style.backgroundColor == "white") {
                         block.style.backgroundColor = getRandomColor();
-                    } else if (block.style.backgroundColor !== "white") {
-                        block.style.backgroundColor = "white";
+                        block.style.opacity = 0.1;
+                    } else if (block.style.opacity !== 1) {
+                        let currentOpacity = Number(block.style.opacity);
+                        block.style.opacity = (currentOpacity + 0.1);
                     }
                 });
             });
