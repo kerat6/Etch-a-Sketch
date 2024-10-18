@@ -4,32 +4,20 @@ for (let i = 0; i < (16 * 16); i++) {
     const div = document.createElement("div");
     div.setAttribute("class", "block")
     div.style.display = "flex";
-    div.style.height = `${1000 / 16}px`;
+    div.style.height = `${700 / 16}px`;
     div.style.width = `${1000 / 16}px`;
     div.style.flexGrow = 1;
     div.style.alignItems = "center";
     div.style.backgroundColor = "white";
     // container.style.border = "solid black";
-    div.style.border = "solid black";
-    div.style.borderWidth = '0px';
+    // div.style.border = "solid black";
+    // div.style.borderWidth = '1px';
     container.appendChild(div)
 
 
 }
 
-
 const blocks = document.querySelectorAll('.block')
-// blocks.forEach((block => {
-//     block.addEventListener('mouseenter', (colorChange) => {
-//         if (block.style.backgroundColor == "white") {
-//             block.style.backgroundColor = "black"
-//         }
-//         else if (block.style.backgroundColor == "black") {
-//             block.style.backgroundColor = 'white'
-//         }
-//     });
-
-// }));
 
 function getRandomColor() {
     return '#' + Math.random().toString(16).substring(2, 8);
@@ -72,7 +60,7 @@ buttons.forEach(button => {
                 div.setAttribute("class", "block")
                 div.style.display = "flex";
                 div.style.flexGrow = '1';
-                div.style.height = `${1000 / gridSize}px`;
+                div.style.height = `${700 / gridSize}px`;
                 div.style.width = `${1000 / gridSize}px`;
                 div.style.alignItems = "center";
                 div.style.backgroundColor = "white";
